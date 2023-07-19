@@ -1,0 +1,21 @@
+---
+interface Props {
+    url: string,
+    title: string,
+    price: string,
+    subtitle: string
+}
+
+const {url, title, price, subtitle} = Astro.props
+
+---
+
+
+<article class="w-[100%] m-auto text-themeblue mb-3">
+    <img src={url} alt="">
+    <div class="flex flex-row justify-between align-middle mt-[5px]">
+        <h3 class="font-extrabold tracking-wider text-[20px]">{title}</h3>
+        <span>{price} €</span>
+    </div>
+    <p class="text-sm">{subtitle}</p>
+</article>

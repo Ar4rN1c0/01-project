@@ -1,4 +1,7 @@
 ---
+import Header from '../components/Header.astro'
+import HeroSection from '../components/HeroSection.astro'
+import MainProducts from '../components/MainProducts.astro';
 ---
 
 <html lang="en">
@@ -9,7 +12,20 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="scroll-smooth">
+		<Header></Header>
+		<main>
+			<HeroSection></HeroSection>
+			<MainProducts></MainProducts>
+			<section class="h-[50vh] overflow-hidden bg-themegrey flex flex-col justify-between items-center">
+				<div class="w-full text-center pt-10">
+					<h3 class="text-themeblue text-4xl font-bold mb-3">
+						CREATE YOUR OWN CONSOLE
+					</h3>
+					<p class="text-themeblue">Add-on to make it perfect</p>
+				</div>
+				<img src="BannerMiddle.webp" class="w-[50%] relatove top-[-200px]" alt="">
+			</section>
+		</main>
 	</body>
 </html>
